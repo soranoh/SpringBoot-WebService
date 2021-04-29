@@ -19,6 +19,13 @@ public class PostsService {
         return postsRepository.save(requestDto.toEntity()).getId();
     }
 
+    /*
+     * 더티 체킹(Dirty Checking)
+     * : 상태 변경 검사
+     * : JPA 에서 엔티티 조회상태 그대로의 스냅샷과 비교하여 변경된 내용이 있다면 update query 를 DB로 전달한다.
+     * : JPA 의 영속성 컨텍스트 때문(엔티티를 영구 저장하는 환경)
+     * : 별도로 update query 날릴 필요 x
+     */
     @Transactional
     public Long update(Long id, PostsUpdateRequestDto requestDto) {
         Posts posts = postsRepository.findById(id)
