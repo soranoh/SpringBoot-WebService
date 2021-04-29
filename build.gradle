@@ -33,6 +33,18 @@ repositories {
 }
 
 dependencies {
+    /*
+     * spring-boot-starter-data-jpa
+     * : 스프링 부트용 Spring Data Jpa 추상화 라이브러리
+     * : 스프링 부트 버전에 맞춰 자동으로 JPA 관련 라이브러리 버전을 관리
+     * H2
+     * : 인메모리 RDB
+     * : 별도의 설치 없이 프로젝트의 의존성만으로 관리 가능
+     * : 메모리에서 실행됨 -> 어플리케이션 시작마다 초기화
+     */
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('com.h2database:h2')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
