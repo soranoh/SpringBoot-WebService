@@ -13,7 +13,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
  * : 스프링부트 및 스프링 bean 관련(읽기, 생성) 자동 설정 어노테이션
  * : 해당 위치부터 설정 읽기 -> 최상단에 위치 필수
  */
-@EnableJpaAuditing
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {
