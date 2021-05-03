@@ -41,11 +41,16 @@ dependencies {
      * : 인메모리 RDB
      * : 별도의 설치 없이 프로젝트의 의존성만으로 관리 가능
      * : 메모리에서 실행됨 -> 어플리케이션 시작마다 초기화
+     * spring-boot-starter-oauth2-client
+     * : 소셜 로그인 등 client 입장에서 소셜 기능 구현 시 필요
+     * : spring-boot-starter-oauth2-client 와 spring-security-oauth2-jose 기본 관리
      */
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('com.h2database:h2')
     compile('org.springframework.boot:spring-boot-starter-mustache')
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+    compile('org.springframework.session:spring-session-jdbc')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

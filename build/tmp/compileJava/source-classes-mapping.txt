@@ -1,0 +1,2 @@
+com/nsr/webservice/springboot/Application.java
+ com.nsr.webservice.springboot.Application
